@@ -1,0 +1,21 @@
+echo "Assignment #3-1, Eric Deanda, masc1778"
+
+pass=`grep "YOKO JAMIKA" $1 | cut -d "," -f3` #Getting password from provided directory
+#Getting arguments for site and username, using them to copy files from site
+SCP=`expect -c "
+spawn scp $3@$2:encryptor .
+expect password: { send $pass\r }
+sleep 1
+exit
+"
+expect -c "
+	spawn scp $3@$2:*.enc .
+	expect password: { send $pass\r }
+	sleep 1
+	exit
+	"`
+find "encryptor" #showing encryptor
+for file in *.enc #echoing all files with enc termination
+do
+	echo $file
+	done

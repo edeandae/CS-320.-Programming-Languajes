@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+int main()
+{
+	printf("Assignment #1-1, Eric Deanda, masc1778\n");
+	printf("Hello! My name is Eric Deanda.\n");
+
+	return 0;
+}

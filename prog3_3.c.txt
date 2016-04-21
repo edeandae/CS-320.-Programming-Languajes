@@ -1,0 +1,28 @@
+#include <stdio.h>
+int main(int argc, char ** argv)
+{
+
+char encryptedArray[256];
+int key;
+int x;
+char defaulChar=' ';
+
+key=atoi(argv[1]);
+printf("%d\n", key);
+scanf("%[^\n]%*c", encryptedArray);
+
+	for(x=0; x < strlen(encryptedArray) ; x++)
+	{
+		defaulChar = encryptedArray[x];
+		if(defaulChar == ' ')
+			defaulChar = ' ';
+		else
+			defaulChar = defaulChar - key;
+		
+		if(defaulChar < 0)
+			defaulChar +=26;
+		printf("%c", defaulChar);	
+	}
+	printf("\n");
+	return 0;
+}

@@ -1,0 +1,12 @@
+#!/bin/bash
+echo "Assignment #2-3, Eric Deanda, masc1778"
+for z in $1 $2 $3 $4
+do	gcc -lm -o ${z%.c} $z
+	if   grep -q "%.3f"  $z;then
+		echo "$z Assignment #1"
+	elif grep -q "%.4f"  $z;then
+		echo "$z Assignment #2"
+	elif grep -q "%.5f"  $z;then
+		echo "$z Assignment #3"
+	else    echo "$z Assignment #4"
+	fi done

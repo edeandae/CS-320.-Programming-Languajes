@@ -1,0 +1,10 @@
+#!/bin/bash
+echo "Assignment #2-1, Eric Deanda, masc1778"
+firstName=`grep "100" $1 | cut -d "," -f1`
+lastName=`grep "100" $1 | cut -d "," -f2`
+
+echo $firstName $lastName
+account=`grep "$firstName" $2 | cut -d "," -f2`
+echo $account
+pass=`grep "$firstName" $2 | cut -d "," -f3`
+echo $pass

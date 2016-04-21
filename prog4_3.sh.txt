@@ -1,0 +1,13 @@
+#!/bin/bash
+echo "Assignment #4-3, Eric Deanda, masc1778"
+
+gcc prog4_1.c -llua -lm -L /home/ma/j/lindenea/lua/lib/ -I /home/ma/j/lindenea/lua/headers/ -R /home/ma/j/lindenea/lua/lib
+fileOutput=`./a.out $1` 
+correctOutput=`cat $2`
+
+if [ "$fileOutput" != "$correctOutput" ];
+then
+echo "Failed Test"
+else
+echo "Passed Test"
+fi

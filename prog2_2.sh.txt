@@ -1,0 +1,11 @@
+#!/bin/bash
+echo "Assignment #2-2, Eric Deanda, masc1778"
+
+#Cuts the files to programs
+programs=`grep -r "#include <stdio.h>" $1 | cut -d ":" -f1`
+
+#Prints out and copies each of the programs while adding .c
+for program in $programs
+	do	basename $program.c
+		cp -f $program $(basename $program).c
+done

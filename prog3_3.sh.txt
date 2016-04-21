@@ -1,0 +1,14 @@
+#!/bin/bash
+echo "Assignment #3-3, Eric Deanda, masc1778"
+
+key=$1
+gcc prog3_3.c
+
+for file in *.enc
+do
+	fileout=`echo $file | cut -d  '.' -f1`.dec
+	cat $file | ./a.out $key > $fileout
+	echo $fileout
+
+	
+done

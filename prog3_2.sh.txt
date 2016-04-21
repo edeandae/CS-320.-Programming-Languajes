@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo "Assignment #3-2, Eric Deanda, masc1778"
+
+original="F"
+
+encrypted=$(echo $original | encryptor) #saving encrypted variable after sending it to encryptor
+
+gcc prog3_2.c -o prog3_2
+
+echo $encrypted | prog3_2 $original #giving c program stdIn and command line argument to compare them
+
+
+

@@ -1,0 +1,21 @@
+    #include <stdio.h>
+    #include <string.h>
+    #include <lua.h>
+    #include <lauxlib.h>
+    #include <lualib.h>
+    
+   int main(int argc, char *argv[]) 
+{
+printf("Assignment #4-1, Eric Deanda, masc1778\n");
+      char buff[256];
+      int error;
+      lua_State *L = luaL_newstate();   /* opens Lua */
+      
+      
+      luaL_openlibs(L);
+      error=luaL_dofile(L,argv[1]);
+      	if(error){      
+      		fprintf(stderr,"%s\n",lua_tostring(L, -1));
+		lua_pop(L,1);     
+    		 }
+}

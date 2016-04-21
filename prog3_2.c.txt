@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main(int argc, char **argv){
+	int key; //encryptor rotation.
+	char original = argv[1][0]; //command line argument.
+	char encryptedArray[256]; 
+	scanf("%s",encryptedArray); //StdIn.
+	key = encryptedArray[0] - original;
+	printf("%d\n",key); //stdOut encryptor rotation.
+	return 0;
+}

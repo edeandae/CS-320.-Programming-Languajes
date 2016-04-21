@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main(void)
+{
+	char* name;
+
+	printf("Assignment#1_2, Eric Deanda, masc1778\n");
+	printf("Hello! What is your name?\n");
+	scanf("%s",&name);
+	printf("Hello %s. Nice to meet you!\n",&name);
+	return 0;
+}
